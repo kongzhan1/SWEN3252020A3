@@ -1,0 +1,20 @@
+// Refer to: https://www.jianshu.com/p/0b405e6b8b1f
+progress-bar {
+    .progress-outer {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      background-color: #f4f4f4;
+      border: 1px solid #dcdcdc;
+      color: #fff;
+      border-radius: 10px;
+    }
+    .progress-inner {
+      min-width: 15%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 3px;
+      border-radius: 10px;
+      background-color: #64bea9;
+    }
+  }

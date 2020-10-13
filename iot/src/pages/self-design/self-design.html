@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="background-color: rgb(79, 200, 248)">
+      <p align="center">AverageMovement</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: lightblue;">
+  <div style="display: block">
+    <canvas 
+    baseChart 
+    [datasets]="doughnutChartData" 
+    [labels]="doughnutChartLabels" 
+    [chartType]="doughnutChartType"
+    (chartHover)="chartHovered($event)" 
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</ion-content>

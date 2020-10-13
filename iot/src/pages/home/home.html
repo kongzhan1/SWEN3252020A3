@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title style="background-color: rgb(79, 200, 248)">
+      <p align="center">Senior Status</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: lightblue">
+  <div style="height: 30%;align-items: center">
+  <ion-card style="background-color: lightblue; align-items: center;" >
+    <ion-card-header>Last Seen Location:</ion-card-header>
+    <ion-card-content *ngIf="this.duration >= 0.1">
+      <p style="font-size: 120%; font-weight: bold; color: black">{{this.lastLocation}}</p>
+    </ion-card-content>
+    <ion-card-content *ngIf="this.duration < 0.1">
+        <p style="font-size: 120%; font-weight: bold; color: orange">{{this.lastLocation}}</p>
+      </ion-card-content>
+  </ion-card>
+</div>
+<div style="height: 30%;align-items: center">
+  <ion-card style="background-color: lightblue;">
+    <ion-card-header>Time Since Last Motion:</ion-card-header>
+    <ion-card-content *ngIf="this.duration >= 0.1">
+      <p style="font-size: 120%; font-weight: bold; color: black">{{this.duration}} minute</p>
+    </ion-card-content>
+    <ion-card-content *ngIf="this.duration < 0.1">
+      <p style="font-size: 120%; font-weight: bold; color: orange">{{this.duration}} minutes</p>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+  <div>
+    <div>
+      <canvas 
+        baseChart 
+        [datasets]="barChartData"  
+        [options]="barChartOptions"
+        [legend]="barChartLegend" 
+        [chartType]="barChartType" 
+        [colors]="dark"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"
+        [labels]="barChartLabels"></canvas>
+    </div>
+  </div>
+</ion-content>

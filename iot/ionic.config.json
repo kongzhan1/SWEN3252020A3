@@ -1,0 +1,7 @@
+{
+  "name": "iot",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

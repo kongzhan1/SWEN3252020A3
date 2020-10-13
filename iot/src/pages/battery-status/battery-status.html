@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="background-color: rgb(79, 200, 248)">
+      <p align="center">Battery Status</p>
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: lightblue;">
+  <ion-list >
+    <ion-card style="background-color: lightblue;">
+      <ion-row justify-content: space-betwee>
+        <ion-col>
+          <ion-card-header>Living Room: </ion-card-header>
+        </ion-col>
+        <ion-col>
+          <ion-card-header *ngIf="this.living <= 20">
+            <p style="color: #ea3a3a; font-size: large; font-weight: 1000;">Low Battery</p>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-card-content>
+        <progress-bar [progress]="this.living"></progress-bar>
+      </ion-card-content>
+    </ion-card >
+    <ion-card style="background-color: lightblue;">
+      <ion-row justify-content: space-betwee>
+        <ion-col>
+          <ion-card-header>Kitchen Area: </ion-card-header>
+        </ion-col>
+        <ion-col>
+          <ion-card-header *ngIf="this.kitchen <= 20">
+            <p style="color: #ea3a3a; font-size: large; font-weight: 1000;">Low Battery</p>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-card-content>
+        <progress-bar [progress]="this.kitchen"></progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card style="background-color: lightblue;">
+      <ion-row justify-content: space-betwee>
+        <ion-col>
+          <ion-card-header>Dining Room: </ion-card-header>
+        </ion-col>
+        <ion-col>
+          <ion-card-header *ngIf="this.dining <= 20">
+            <p style="color: #ea3a3a; font-size: large; font-weight: 1000;">Low Battery</p>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-card-content>
+        <progress-bar [progress]="this.dining"></progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card style="background-color: lightblue;">
+      <ion-row justify-content: space-betwee>
+        <ion-col>
+          <ion-card-header>Toilet Area: </ion-card-header>
+        </ion-col>
+        <ion-col>
+          <ion-card-header *ngIf="this.toilet <= 20">
+            <p style="color: #ea3a3a; font-size: large; font-weight: 1000;">Low Battery</p>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-card-content>
+        <progress-bar [progress]="this.toilet"></progress-bar>
+      </ion-card-content>
+    </ion-card>
+    <ion-card style="background-color: lightblue;">
+      <ion-row justify-content: space-betwee>
+        <ion-col>
+          <ion-card-header>Bedroom Area: </ion-card-header>
+        </ion-col>
+        <ion-col>
+          <ion-card-header *ngIf="this.bedroom <= 20">
+            <p style="color: #ea3a3a; font-size: large; font-weight: 1000;">Low Battery</p>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-card-content>
+        <progress-bar [progress]="this.bedroom"></progress-bar>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
